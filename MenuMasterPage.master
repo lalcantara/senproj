@@ -1,0 +1,117 @@
+﻿<%@ Master Language="VB" MasterPageFile="SiteMasterPage.master" AutoEventWireup="false" CodeFile="MenuMasterPage.master.vb" Inherits="MenuMasterPage" %>
+
+<asp:Content ID="MainContent" ContentPlaceHolderID="MenuContentPlaceHolder" Runat="Server">
+    <!-- 
+
+  CONTENT
+
+  -->
+<div id="content-container">
+  <!-- 
+	
+	SIDE COLUMN
+	
+	-->
+  <!-- 
+	
+	MAIN COLUMN
+	
+	-->
+    <asp:ContentPlaceHolder id="CenterContentPlaceHolder" runat="server">
+      <div id="content"><a name="maincontent" id="A1"></a>
+      <table style="width:600px; height: 190px;">
+          <tr>
+              <td>
+                  <br />
+                  <img alt="Building-Front" longdesc="Front of Carden Academy" 
+                      src="default/building_front.jpg" style="width: 318px; height: 171px" /><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        We meet at the Carden Academy</td>
+              <td align="left">
+                <h4>Bible Verse, &quot;text text text text text text tex text text text text text 
+                    text ...&quot;  <a href="#" id="aVerse1">read more</a> </h4>
+              </td>
+          </tr>
+      </table>
+    <h1>
+        <asp:Label ID="Label1" runat="server" Text="Label">Current Article Date and 
+        Title</asp:Label>
+    </h1>
+      &nbsp;<asp:Literal ID="ltlArticle" runat="server"></asp:Literal>
+      <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+    <div class="clear"></div>
+        &nbsp;&nbsp;
+
+  <h1>Recent Announcements</h1>
+            <asp:Table runat="server">
+            </asp:Table>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server"></asp:SqlDataSource>
+
+            </p>
+            </div>
+    </asp:ContentPlaceHolder>
+
+  <!-- 
+	
+	SIDE 2 COLUMN
+	
+	-->
+    <div id="content-side-2">
+   <div class="clear"></div>
+   <h4 id="h4PrayerVerse">Bible Verse &quot;text text text text...&quot; <a href="#" id="aVerse2">read more</a></h4>
+   <h2 align="center" id="h2Prayer">Prayer List</h2>
+            <asp:DataList ID="DataList1" runat="server" BorderColor="White" 
+            DataKeyField="prayer_id" DataSourceID="dsPrayer" Width="150px" 
+            BorderWidth="2px">
+                <AlternatingItemStyle BackColor="#F6F6F6" Font-Bold="False" Font-Italic="False" 
+                    Font-Overline="False" Font-Strikeout="False" Font-Underline="False" />
+                <ItemStyle BackColor="White" Font-Bold="False" Font-Italic="False" 
+                    Font-Overline="False" Font-Strikeout="False" Font-Underline="False" />
+                <ItemTemplate>
+                    &nbsp;<asp:Label ID="prayer_idLabel" runat="server" 
+                        Text='<%# Eval("prayer_id") %>' />
+                    :
+                    <asp:Label ID="request_textLabel" runat="server" 
+                        Text='<%# Eval("request_text") %>' />
+                    <br />
+                    <br />
+                </ItemTemplate>
+        </asp:DataList>
+            <asp:SqlDataSource ID="dsPrayer" runat="server" 
+                  ConnectionString="<%$ ConnectionStrings:church_dbConnectionString %>" 
+                  ProviderName="<%$ ConnectionStrings:church_dbConnectionString.ProviderName %>" 
+                  SelectCommand="SELECT * FROM prayer_request"></asp:SqlDataSource>
+  <div class="clear">
+      <br />
+                        </div>
+   <h4 id="h4ReadingVerse">Bible Verse &quot;text text text text...&quot; <a href="#" id="aVerse3">read more</a></h4>
+   <h2 align="center" id="h2Reading">Bible Reading</h2>
+        <asp:DataList ID="DataList2" runat="server" BorderColor="White" 
+            DataSourceID="dsReading" Width="150px" BorderWidth="2px">
+            <AlternatingItemStyle BackColor="#F6F6F6" Font-Bold="False" Font-Italic="False" 
+                Font-Overline="False" Font-Strikeout="False" Font-Underline="False" />
+            <ItemStyle BackColor="White" Font-Bold="False" Font-Italic="False" 
+                Font-Overline="False" Font-Strikeout="False" Font-Underline="False" />
+            <ItemTemplate>
+                <asp:Label ID="DateLabel" runat="server" Text='<%# Eval("Date") %>' 
+                    Font-Bold="True" />
+                <br />
+                &nbsp;
+                <asp:Label ID="VersesLabel" runat="server" Text='<%# Eval("Verses") %>' />
+                <br /><br />
+            </ItemTemplate>
+        </asp:DataList>
+        <asp:SqlDataSource ID="dsReading" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:church_dbConnectionString %>" 
+            ProviderName="<%$ ConnectionStrings:church_dbConnectionString.ProviderName %>" 
+            SelectCommand="select date_format(reading_date, '%W, %m:%d') as 'Date',
+                concat(beginning,' to ', ending) as 'Verses'
+                from bible_reading
+                where month(reading_date) = month(current_date)
+                and dayofmonth(reading_date) &lt; (dayofmonth(current_date) +3)
+                and dayofmonth(reading_date) &gt; (dayofmonth(current_date) - 3);"></asp:SqlDataSource>
+    </div>
+  
+</div>
+</asp:Content>
+

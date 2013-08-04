@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Change Log</h1>
+    <h4>August 5</h4>
+        <lu>
+            <li>v1.0.3 Starting Change Log</li>
+            <li>Main Page Design v2</li>
+            <li>Change to style sheet heading 2 (+.1 em)</li>
+            <li>Change to style sheet heading 4 (italics)</li>
+        </lu>
+
+    <h4>8/7/09 v1.1.0</h4>
+    --General Changes--
+        <lu>
+            <li>Created SiteMasterPage.master for main master page</li>
+            <li>Created MenuMasterPage.master to hold content-side & content-side2</li>
+            <li>Created MemberMasterPage.master for member content</li>
+            <li>Created AdminMasterPage.master for admin content</li>
+            <li>PlaceHolder1-6 added for content placeholders in MemberMasterpage.master and AdminMasterPage.master</li>
+        </lu><br /><br />
+    --Edits to html--
+        <lu>
+            <li>Deleted Default.aspx page and moved all code to respective .master pages</li>
+            <li>Removed div id="body"</li>
+        </lu><br /><br />
+    <h4>8/10/09 v.1.1.1</h4>
+    --Edits to .css file--
+        <lu>
+            <li>Added #wrapper {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:981px;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: 0 auto;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+            <li>Added width: 960px to:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#mainnav-container<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#header<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#footer</li>
+            <li>Added with: 980px to:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#breadcrumb-container</li>
+</lu>
+<h4>8/12/09 v1.1.2</h4>
+        --edits to master pages
+    <lu>
+        <li>Changed links on admin master page</li>
+        <li>Changed links on member master page</li><br />
+&nbsp;--creation of mainpage<li>created main content page (mainpage.aspx) for menu 
+        master page
+    </lu>
+    <h4>8/18/09 v1.1.3</h4>
+    --General Changes--
+    <lu>
+    <li>Created About.aspx page derived from MenuMasterPage.master</li>
+    <li>Created Directions.aspx page derived from MenuMasterPage.master</li>
+    </lu><br /><br />
+    --AdminMasterPage.master--
+    <lu>
+    <li>Corrected error line 22:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removed erroneous < /li ></li>
+    <li>Corrected missing < /div > for < div id="content-container" ></li>
+    </lu><br /><br />
+    --MainPage.aspx--
+    <lu>
+    <li>Corrected error line 1:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CodeFile still referencing "Default.aspx.vb" updated to reflect filename change<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Updated class name Inherits="MainPage"</li>
+    <li>Corrected error line 105:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removed orphan < /p ></li>
+    </lu><br /><br />
+    --MainPage.aspx.vb--
+    <lu>
+    <li>Changed Class name from _Default to MainPage to reflect filename change</li>
+    <li>Removed:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;< div id="Div1" > line 17 was not referenced in css file and is redundant as there is a < div id="content-side" > with defined parameters</li>
+    </lu><br /><br />
+    --SiteMasterPage.master--
+    <lu>
+    <li>Added links to reflect creation of About.aspx and Directions.aspx</li>
+    </lu>
+
+    <h4>
+        8/15/09 v1.1.3</h4>
+    --Edits to .css file--
+    <lu>
+        <li>gave h2 underline
+    </lu>
+            <br />
+            <br />
+            --Edits to MainPage.aspx
+     <lu>
+        </li>
+    <li>Added gridview for announcements</li>
+    <li>Filled gridview with announcement data
+     </lu>
+        <br />
+        <br />
+        --Edits to MenuMasterPage.master
+    <lu>
+        </li>
+    <li>Added datalist for prayer requests and bible readings</li>
+    <li>Filled datalists with requests and readings
+    </lu>
+
+        <h4>
+            8/17/09 v1.1.4</h4>
+        --Edits to .css file--
+    <lu>
+        </li>
+    <li>removed margin top from footer to make it closer to body (it is still too far 
+        away)</lu><br />
+        <br />
+        --Edits to MainPage.aspx
+     <lu>
+        </li>
+    <li>Added datalist to article area</li>
+    <li>Filled datalist with article data</li></lu><br />
+ 
+    <h4> 8/24/09 v1.1.5</h4>
+        --Edits to .css file--
+    <lu>
+  
+        <li>set margin top for the footer div to 2px</li>, everything displays properly in 
+            firefox/ie</lu><br />
+        <br />
+     
+        --Edits to Menu Master
+    <lu>
+        <li>Removed the login, removed a semicolin in the bible reading datalist</li></lu><br /><br />
+        --Edits to Main Page
+    <lu><li>added login to main page</li>, everthing appears to display properly in 
+        firefox/ie</lu>
+       
+    <h4>8/30/09 - 9/1/09 v1.1.6</h4>
+    <lu><li>Created elements of create_assign page</li>
+    <li>Created elements of view_assign page</li>
+    <li>Create elements of member_assign page</li>
+    <li>Programmed elements of create assign page</li>
+    <li>Programmed elements of view assign page</li>
+    <li>Programmed elements of member_assign page</li></lu>
+    <br />
+    --Edits to Master Pages
+    <lu><li>Removed unnecessary forms to member and admin master pages</li>
+    <li>Removed uneccesary content placeholders</li>
+    <li>Created and named center content placehold on member and admin master pages<br />
+        to hold the main portion of member and admin content pages</li></lu>
+        
+    <h4>9/6/09 v1.1.7</h4>
+    --General Changes--
+    <lu>
+    <li>Created Login.aspx page</li>
+    <li>created LoggedOut.aspx page</li>
+    </lu><br /><br />
+    --Login.aspx.vb--
+    <lu>
+    <li>Static information added for testing purposes.</li>
+    <li>*The click event should be changed to reference database.</li>
+    </lu><br /><br />
+    --web.config--
+    <lu>
+    <li>Authentication mode changed to Forms</li>
+    </lu><br /><br />
+    --main.aspx--
+    <lu>
+    <li>Removed Login form</li>
+    </lu>
+</body>
+</html>

@@ -1,0 +1,92 @@
+﻿<%@ Master Language="VB" CodeFile="SiteMasterPage.master.vb" Inherits="SiteMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="default/msvs_template_simple_divs.css" rel="stylesheet" type="text/css" />
+    <title>South Valley Church of Christ</title>
+</head>
+<body>
+<div id="wrapper">
+    
+<!-- 
+  
+  TOP NAV
+  
+  -->
+<div id="mainnav-container">
+  <div class="clear"></div>
+</div>
+<!-- 
+  
+  SITE NAME & SLOGAN
+  
+  -->
+<div id="header">
+<a href="main.aspx" title="Site name home page" accesskey="aTitle">South Valley Church of Christ</a>
+    <div id="slogan">
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    &nbsp; 410 Llagas Rd<br />
+                    &nbsp; Morgan Hill, CA&#8206; 95037<br />
+                    &nbsp; 408-779-6531
+                </td>
+                <td align="right">
+                    &nbsp; Sunday Worship Service at 9:30 AM<br />
+                    &nbsp; Sunday Bible Class at 10:45 AM<br />
+                    &nbsp; Thursday Bible Class at 7:30 PM
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="breadcrumb-container">
+  <div id="mainnav"><div class="none"><a href="#maincontent">skip to the main content 
+      area of this page</a></div>
+      &nbsp;&nbsp; 
+      <a href="main.aspx" 
+          title="Return Home" 
+          id="aHome">Home</a>&nbsp; | &nbsp;
+      <a href="about.aspx" 
+          title="Who We Are" 
+          id="aAbout">About</a>&nbsp; | &nbsp;
+      <a href="#" 
+          title="Questions and Answers" 
+          id="aFundementals">Fundementals</a>&nbsp; | &nbsp;
+      <a href="#" 
+          title="View Older Articles" 
+          id="aArticles">Articles</a>&nbsp; | &nbsp;
+      <a href="#" 
+          title="Read Sermon Notes" 
+          id="aSNotes">Sermon Notes</a>&nbsp; | &nbsp;
+      <a href="#" 
+          title="Find Other Churches" 
+          id="aDirectory">Church Directory</a>&nbsp; | &nbsp;
+      <a href="directions.aspx" 
+          title="Get Directions" 
+          id="aDirections">Directions</a>&nbsp; | &nbsp;
+      <a href="#" 
+          title="Send Questions or Comments" 
+          id="aEmail">Email Us</a>&nbsp;
+  </div>
+  <div class="clear"></div>
+</div>
+
+    <div>
+    <form runat = server>
+        <asp:ContentPlaceHolder id="MenuContentPlaceHolder" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </form>
+    </div>
+    <div id="footer">
+     <p>410 Llagas Rd<br />
+      Morgan Hill, CA&#8206; 95037<br />
+      408-779-6531<br />
+      Copyright © 2009 SV Church of Christ</p>
+    </div>
+</div>
+</body>
+</html>

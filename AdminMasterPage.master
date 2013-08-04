@@ -1,0 +1,57 @@
+﻿<%@ Master Language="VB" MasterPageFile="SiteMasterPage.master" AutoEventWireup="false" CodeFile="AdminMasterPage.master.vb" Inherits="AdminMasterPage" %>
+
+<asp:Content ID="AdminContent" ContentPlaceHolderID="MenuContentPlaceHolder" Runat="Server">
+    <!-- 
+
+  CONTENT
+
+  -->
+<div id="content-container">
+  <!-- 
+	
+	SIDE COLUMN
+	
+	-->
+  <div id="content-side">
+      <ul class="link-list-vertical">
+      <li><a href="#" title="Manage Members">Members List</a></li>
+      <li><a href="create_assign.aspx" title="Edit Assignments">Weekly Assignments</a></li>
+      <li><a href="#" title="Reports">Reports</a></li>
+      <li><a href="#" title="Manage Main Page">Manage Main Page</a></li>
+      <li></li><a href="#" title="Articles">Manage Articles</a></li>
+      <li><a href="#" title="Logout">Logout</a></li>
+    </ul>
+    </div>  
+
+ <!-- 
+	
+	MAIN COLUMN
+	
+	-->
+<asp:ContentPlaceHolder ID="CenterContentPlaceHolder" runat="server">
+  <div id="content"><a name="maincontent" id="maincontent"></a>
+          <table style="width:600px; height: 190px;">
+          <tr>
+              <td>
+                  <br /><br />
+                                          &nbsp;&nbsp;</td>
+              <td align="left">
+                  &nbsp;</td>
+          </tr>
+      </table>
+      <br />
+&nbsp;</p>
+    </div>
+</asp:ContentPlaceHolder>
+  <!-- 
+	
+	SIDE 2 COLUMN
+	
+	-->
+  <div id="content-side-2">
+      &nbsp;<asp:PlaceHolder ID="PlaceHolder6" runat="server">
+      </asp:PlaceHolder>
+        &nbsp;&nbsp;
+    </div>
+</asp:Content>
+
